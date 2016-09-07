@@ -1,322 +1,121 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
 
-    <body>
-        <style type="text/css">
-            * {
-                padding: 0;
-                margin: 0;
-            }
-            div {
-                /*
-                background: -webkit-linear-gradient(left, white, lightblue);
-                /* For Safari 5.1 to 6.0 
-                background: -o-linear-gradient(right, white, lightblue);
-                /* For Opera 11.1 to 12.0 
-                background: -moz-linear-gradient(right, white, lightblue);
-                /* For Firefox 3.6 to 15 
-                background: linear-gradient(to right, white, lightblue);
-                /* Standard syntax */
-                margin:auto;
-                position:relative;
-                background-color:#292929;
-                font-family: Arial, black, Bold;
-                font-size: 30px;
-                font-weight: bold;
-                color: #f4f4f4;
-                font-style: italic;
-                line-height: 40px;
-                
-            }
-            canvas {
-                resize: both;
-                overflow: auto;
-                border:0px solid #d3d3d3;
-            }
-        }
-        </style>
-        <div id="frm">
+  <!-- Basic Page Needs
+   -->
+  <meta charset="utf-8">
+  <title>Your page title here :)</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <!-- Mobile Specific Metas
+   -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- FONT
+   -->
+  <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+	
+  <!-- CSS
+   -->
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/skeleton.css">
+  <link rel="stylesheet" href="css/custom.css">
+  <!-- Favicon
+   -->
+  <link rel="icon" type="image/png" href="images/favicon.png">
+  <!-- Scripts
+  -->
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
+  <link rel="stylesheet" href="css/github-prettify-theme.css">
+  <script src="js/site.js"></script>
 
 
-            <form id="Frm1">
+</head>
+<body>
 
+  <!-- Primary Page Layout
+   -->
+  <div class="container">
+	<div class="navbar-spacer"></div>
+    <nav class="navbar">
+      <div class="container">
+        <ul class="navbar-list">
+          <li class="navbar-item"><a class="navbar-link" href="#intro">Intro</a></li>
+          <li class="navbar-item">
+            <a class="navbar-link" href="#" data-popover="#codeNavPopover">Code</a>
+            <div id="codeNavPopover" class="popover">
+              <ul class="popover-list">
+                <li class="popover-item">
+                  <a class="popover-link" href="#grid">Grid</a>
+                </li>
+                <li class="popover-item">
+                  <a class="popover-link" href="#typography">Typography</a>
+                </li>
+                <li class="popover-item">
+                  <a class="popover-link" href="#buttons">Buttons</a>
+                </li>
+                <li class="popover-item">
+                  <a class="popover-link" href="#forms">Forms</a>
+                </li>
+                <li class="popover-item">
+                  <a class="popover-link" href="#lists">Lists</a>
+                </li>
+                <li class="popover-item">
+                  <a class="popover-link" href="#code">Code</a>
+                </li>
+                <li class="popover-item">
+                  <a class="popover-link" href="#tables">Tables</a>
+                </li>
+                <li class="popover-item">
+                  <a class="popover-link" href="#queries">Queries</a>
+                </li>
+                <li class="popover-item">
+                  <a class="popover-link" href="#utilities">Utilities</a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="navbar-item"><a class="navbar-link" href="#examples">Examples</a></li>
+          <li class="navbar-item">
+            <a class="navbar-link" href="#" data-popover="#moreNavPopover">More</a>
+            <div id="moreNavPopover" class="popover">
+              <ul class="popover-list">
+                <li class="popover-item">
+                  <a class="popover-link" href="https://github.com/dhg/Skeleton">On Github</a>
+                </li>
+                <li class="popover-item">
+                  <a class="popover-link" href="https://github.com/dhg/Skeleton#browser-support">Browsers</a>
+                </li>
+                <li class="popover-item">
+                  <a class="popover-link" href="https://github.com/dhg/Skeleton#license">License</a>
+                </li>
+                <li class="popover-item">
+                  <a class="popover-link" href="https://github.com/dhg/Skeleton#extensions">Extensions</a>
+                </li>
+                <li class="popover-item">
+                  <a class="popover-link" href="https://github.com/dhg/Skeleton/releases">Versions</a>
+                </li>
+                <li class="popover-item">
+                  <a class="popover-link" href="https://github.com/dhg/Skeleton#colophon">Colophon</a>
+                </li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <div class="row" style="margin-top: 3%">
+	<h3>Projects</h3>
+	<li>
+	
+	</li>
+    </div>
+  </div>
 
-                <p id='para'>Snake Game By Evan Jesty</p>
-                <input type="color" name="backcolor" value="#161616" onmousedown="Pause">
-                <input type="color" name="snakecolor" value="#3381b2" onmousedown="Pause">
-                <input type="color" name="foodcolor" value="#FEFDFD" onmousedown="Pause">
-                <input type="radio" name="diffrad" value="One">Easy
-                <input type="radio" name="diffrad" value="Two" checked>Medium
-                <input type="radio" name="diffrad" value="One">Hard
-            </form>
-        </div>
-
-
-        <canvas id="myCanvas" width="1900" height="1050" style="resize: both; overflow: auto; border:0px solid #d3d3d3" ;>Your browser does not support the HTML5 canvas tag.</canvas>
-
-
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-
-        <script>
-            function getRandomInt(min, max) {
-                return Math.floor(Math.random() * (max - min + 1)) + min;
-            }
-            var c = document.getElementById("myCanvas");
-            var frm = document.getElementById("Frm1");
-            var ctx = c.getContext("2d");
-            var width = window.innerWidth;
-            var height = window.innerHeight; 
-            ctx.canvas.width = width;
-            ctx.canvas.height = height;
-            var x = [];
-            var y = [];
-            var direction = "n"
-            var length = 10;
-            var speed = 30;
-            var hx = 0;
-            var hy = 0;
-            var mx = getrand(width);
-            var my = getrand(height);
-            var diff = "Medium";
-            var hw = 20;
-            var hh = 20;
-            var mw = 20;
-            var mh = 20;
-
-            var bcolor = "#161616";
-            var scolor = "#3381b2";
-            var fcolor = "#FEFDFD";
-            if (getCookie("color") == "") {
-                setCookie("color", bcolor + "/" + scolor + "/" + fcolor, 300);
-            }
-            var colors = getCookie("color");
-            var colorsarr = colors.split("/");
-            bcolor = colorsarr[0];
-            scolor = colorsarr[1];
-            fcolor = colorsarr[2];
-
-            frm.elements[0].value = bcolor;
-            frm.elements[1].value = scolor;
-            frm.elements[2].value = fcolor;
-            var increase = 10;
-            var hjump = 10;
-            var myVar = null;
-            var py = 0;
-            var px = 0;
-            var highscore = getCookie("HighScore")
-             var ispaused = false;
-
-            function reset() {
-                setCookie("color", bcolor + "/" + scolor + "/" + fcolor);
-                x = [];
-                y = [];
-                if (length > highscore) {
-                    setCookie("HighScore", length, 300)
-                    highscore = length;
-                }
-                width = window.innerWidth;
-                height = window.innerHeight - 80;
-                ctx.canvas.width = width;
-                ctx.canvas.height = height;
-                direction = "R"
-                length = 10;
-                hx = 10;
-                hy = 10;
-
-
-                if (diff == "Hard") {
-                    speed = 30;
-                } else if (diff == "Medium") {
-                    speed = 40;
-                } else if (diff == "Easy") {
-                    speed = 50;
-                }
-                getrand();
-                for (i = 0; i < length; i++) {
-                    x[i] = hx;
-                    y[i] = hy;
-                }
-                clearInterval(myVar);
-                myVar = setInterval(function() {
-                    update()
-                }, speed);
-
-            }
-            reset();
-             //document.getElementById("myCanvas").requestFullscreen();
-
-            function getrand() {
-                my = getRandomInt(10, height - mh);
-                mx = getRandomInt(10, width - mw);
-
-            }
-
-            function setCookie(cname, cvalue, exdays) {
-                var d = new Date();
-                d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
-                var expires = "expires=" + d.toUTCString();
-                document.cookie = cname + "=" + cvalue + "; " + expires;
-            }
-
-            function getCookie(cname) {
-                var name = cname + "=";
-                var ca = document.cookie.split(';');
-                for (var i = 0; i < ca.length; i++) {
-                    var c = ca[i];
-                    while (c.charAt(0) == ' ') c = c.substring(1);
-                    if (c.indexOf(name) == 0) return c.substring(name.length, c.length);
-                }
-                return "";
-            }
-
-            function update() {
-                document.getElementById('para').innerHTML = "Score: " + length + " HighScore:  " + highscore + " Direction:" + direction + " Snake game By Evan Jesty";
-
-
-                if (direction == "R") {
-                    hx += 20
-                } else if (direction == "L") {
-                    hx -= 20;
-                } else if (direction == "U") {
-                    hy -= 20;
-                } else if (direction == "D") {
-                    hy += 20;
-                }
-
-                ctx.fillStyle = bcolor;
-                ctx.fillRect(0, 0, 1920, 1080);
-
-                ctx.fillStyle = fcolor;
-                ctx.fillRect(hx, hy, hw, hh);
-                
-                ctx.fillStyle = scolor;
-                for (var i = 0; i < length; i++) {
-                    ctx.fillRect(x[i], y[i], hw, hh);
-                    ctx.strokeStyle = bcolor;
-                    ctx.strokeRect(x[i], y[i], hw, hh);
-                }
-                var tx = x[length];
-                var ty = y[length];
-                if (checkintersections(mx, hx, mw, hw, my, hy, mh, hh)) {
-
-                    length += 10;
-                    for (i = 0; i < 10; i++) {
-                        x.push(tx);
-                        y.push(ty);
-                    }
-                    getrand()
-                }
-                for (i = 0; i < length; i++) {
-                    if (x[i] == hx && y[i] == hy) {
-                        reset();
-                    }
-                }
-
-                if (hx > width || hy > height || hx < 0 || hy < 0) {
-                    reset();
-                }
-
-                ctx.fillStyle = fcolor;
-                ctx.fillRect(mx, my, mw, mh);
-                //ctx.fillStyle = "White";
-                //ctx.fillRect(px, py, 10, 10);
-
-
-
-                x.unshift(hx);
-                y.unshift(hy);
-                x.pop();
-                y.pop();
-                //
-                for (i = 0; i > length; i++) {
-                    if (checkintersections(mx, hx[i], mw, hw, my, hy[i], mh, hh)) {
-                        getrand();
-                    }
-                }
-
-                bcolor = frm.elements[0].value;
-                scolor = frm.elements[1].value;
-                fcolor = frm.elements[2].value;
-                if (frm.elements[3].checked) {
-                    diff = "Easy";
-                } else if (frm.elements[4].checked) {
-                    diff = "Medium";
-                } else if (frm.elements[5].checked) {
-                    diff = "Hard";
-                }
-            }
-
-            function checkintersections(X1, X2, W1, W2, Y1, Y2, H1, H2) {
-                if (X1 + W1 < X2 || X2 + W2 < X1 || Y1 + H1 < Y2 || Y2 + H2 < Y1) {
-                    return false;
-                } else {
-                    return true;
-                }
-            }
-
-            function Pause() {
-                bcolor = frm.elements[0].value;
-                scolor = frm.elements[1].value;
-                fcolor = frm.elements[2].value;
-                if (frm.elements[3].checked) {
-                    diff = "Easy";
-                } else if (frm.elements[4].checked) {
-                    diff = "Medium";
-                } else if (frm.elements[5].checked) {
-                    diff = "Hard";
-                }
-                if (ispaused) {
-                    ispaused = false;
-                    clearInterval(myVar);
-                    myVar = setInterval(function() {
-                        update()
-                    }, speed);
-
-                } else {
-                    ispaused = true;
-                    clearInterval(myVar);
-                }
-            }
-            $(document).ready(function() {
-                //height = window.innerHeight - $('#frm').height();
-                $(document).keydown(function(e) {
-                    //alert(e.which);
-                    if (ispaused) {
-                        Pause();
-                    }
-                    if (e.which == 87 && direction != "D" || e.which == 38 && direction != "D") {
-                        direction = "U";
-
-                    } else if (e.which == 65 && direction != "R" || e.which == 37 && direction != "R") {
-                        direction = "L";
-
-                    } else if (e.which == 83 && direction != "U" || e.which == 40 && direction != "U") {
-                        direction = "D";
-
-                    } else if (e.which == 68 && direction != "L" || e.which == 39 && direction != "L") {
-                        direction = "R";
-
-                    } else {
-                        Pause();
-                    }
-                    $(window).resize(function() {
-                        reset()
-                    });
-                    //else if (e.which == 83) {
-                    //direction = "D";}
-                    //else if (e.which == 65) {
-                    //direction = "L";}
-                    //else if (e.which == 87) {
-                    //direction = "U";}
-
-                });
-                $(document).mousemove(function(e) {
-                    //Mousemove
-                    py = e.pageY - 75;
-                    px = e.pageX;
-                });
-            });
-        </script>
-
-    </body>
-
+<!-- End Document
+   -->
+</body>
 </html>
